@@ -1,0 +1,33 @@
+<ColorButton@RadioButton>:
+	group: 'color'
+	on_release: app.canvas_widget.set_color(self.background_color)
+	background_normal: 'color_button_normal.png'
+	background_down: 'color_button_down.png'
+	border: (3,3,3,3)
+
+<CanvasWidget>:
+	Button:
+		text: 'Clear'
+		right: root.right - 2
+		top: root.top - 2
+		width: 80
+		height: 40
+		on_release: root.clear_canvas()
+
+	BoxLayout:
+		orientation: 'horizontal'
+		padding: 3
+		spacing: 3
+		x: 0 
+		y: 0
+		width: root.width
+		height: 40
+
+		RadioButton:
+			group: 'color'
+			text: 'red'
+
+		RadioButton:
+			group: 'color'
+			text: 'blue'
+			state: 'down'

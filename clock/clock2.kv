@@ -1,0 +1,38 @@
+BoxLayout:
+	orientation: 'vertical'
+
+	Label:
+		id: current_time
+		font_size: 60
+		font_name: 'Roboto'
+		text: '[b]12[/b]:49:33'
+		markup: True
+
+	BoxLayout:
+		height: 90
+		size_hint: [1, None]
+		orientation: 'horizontal'
+		padding: 10
+		spacing: 5
+
+		Button:
+			id: start_but
+			font_size: 30
+			text: 'Start'
+			bold: False	
+			on_press: app.start_stop()
+
+
+		Button:
+			font_size: 30
+			background_normal: ''
+			background_color: rgba("#D02F2F")
+			text: 'Reset'
+			on_press: app.reset()
+
+	Label:
+		id: timer
+		font_size: 60
+		font_name: 'Roboto'
+		text: '00:00.[size=40]00[/size]'
+		markup: True
