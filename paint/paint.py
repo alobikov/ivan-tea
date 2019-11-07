@@ -51,13 +51,14 @@ class PaintApp(App):
 		return self.canvas_widget
 
 if __name__ == '__main__':
-	Config.set('graphics', 'width', '400')
-	Config.set('graphics', 'heigt', '400')
-	Config.set('input', 'mouse', 'mouse,disable_multitouch')
 
-	from kivy.core.window import Window
-	Window.clearcolor = get_color_from_hex('#FFFFFF')
+    Config.set('graphics', 'width', '400')
+    Config.set('graphics', 'height', '400')
+    Config.set('input', 'mouse', 'mouse,disable_multitouch')
 
-	PaintApp().run()
+    from kivy.core.window import Window
+    Window.clearcolor = 1,1,1,1
+
+    PaintApp().run()
 
 

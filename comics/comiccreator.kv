@@ -1,0 +1,30 @@
+<ComicCreator>:
+	AnchorLayout:
+		anchor_x: 'left'
+		anchor_y: 'top'
+		ToolBox:
+			id: _tool_box
+			# width: 200
+			size_hint: None, None
+	AnchorLayout:
+		anchor_x: 'right'
+		anchor_y: 'top'
+		DrawingSpace:
+			size_hint: None, None
+			width: root.width - _tool_box.width
+			height: root.height  - _general_ops.height - _status_bar.height
+	
+	AnchorLayout:
+		anchor_x: 'center'
+		anchor_y: 'bottom'	
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint: 1, .4
+			GeneralOps:
+				id: _general_ops
+				size_hint: 1, None	
+				height: 36
+			StatusBar:
+				id: _status_bar
+				size_hint: 1, None
+				height: 36

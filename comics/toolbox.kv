@@ -1,0 +1,24 @@
+#file: toolbox.kv
+
+<ToolButton@ToggleButton>:
+	size_hint: None, None
+	size: 48, 48
+	group: 'tool'
+
+<ToolBox@GridLayout>:
+	cols: 2
+	rows: 4
+	padding: 2
+	spacing: 2
+	ToolButton:
+		text: 'O'
+	ToolButton:
+		text: 'X'
+	ToolButton:
+		text: "?"
+	ToolButton:
+		text: 'O'
+	ToolButton:
+		text: 'X'
+	ToolButton:
+		text: "?"

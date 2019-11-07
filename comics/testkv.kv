@@ -1,0 +1,45 @@
+<TestKv>:
+	AnchorLayout:
+		anchor_x: 'left'
+		anchor_y: 'top'
+		Button:
+			id: b1
+			size_hint: .2, .2		
+			text: 'A1'
+
+	AnchorLayout:
+		anchor_x: 'right'
+		anchor_y: 'top'
+#		size_hint: 1, 0.8
+		Button:	
+			size_hint: .2, .2
+			text: 'A2'
+	
+	AnchorLayout:
+		anchor_x: 'center'
+		anchor_y: 'bottom'
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint: 1, .2
+			canvas.before:
+				Color:
+					rgba: .4, .2, .2, 1
+				Rectangle:
+					pos: b1.pos 
+					size: b1.width + 10, b1.height 
+			BoxLayout:
+				Button:	
+					text: 'A5'	
+				Button:	
+					text: 'A6'	
+				Button:	
+					text: 'A7'	
+				Button:	
+					text: 'A8'	
+			BoxLayout:
+				Label:	
+					font_size: 20
+					text: 'L1'		
+				Label:	
+					font_size: 20
+					text: 'L2'
